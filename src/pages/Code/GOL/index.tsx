@@ -27,7 +27,7 @@ const GOL: React.FC = () => {
 
   const runCycles = () => {
     grid.toggleCycling(setCycles);
-    setContinuous(grid.runContinuously || false);
+    setContinuous(grid.runContinuously);
   }
 
   const randomizeCells = () => {
