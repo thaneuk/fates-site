@@ -1,0 +1,24 @@
+.Skills {
+
+  & ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  & .skills {
+    float: left;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0.5em;
+    padding: 0.25em 0.6em;
+    border-left: 2px solid white;
+    overflow: hidden;
+    -webkit-transition: background 0.2s ease-in-out 0s;
+    -moz-transition: background 0.2s ease-in-out 0s;
+    -o-transition: background 0.2s ease-in-out 0s;
+    transition: background 0.2s ease-in-out 0s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

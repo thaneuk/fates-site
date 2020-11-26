@@ -1,0 +1,81 @@
+@mixin icon32 {
+  width: 32px;
+  height: 32px;
+  margin: 10px;
+  float: left;
+}
+
+.Header {
+  padding: 10px 16px 10px 16px;
+  background: rgba(255, 255, 255, .05);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  height: 80px;
+
+  & h1, & h2 {
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .5);
+  }
+
+  & h1 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+
+  & h2 {
+    font-size: 1.2em;
+  }
+
+  & nav {
+    & a {
+      color: #bbb;
+      font-size: 1.2em;
+      font-weight: normal;
+      line-height: 3em;
+      display: inline-block;
+      text-decoration: none;
+      -webkit-transition: text-shadow 0.2s ease-in-out 0s, color .2s ease-in-out 0s;
+      -moz-transition: text-shadow 0.2s ease-in-out 0s, color .2s ease-in-out 0s;
+      -o-transition: text-shadow 0.2s ease-in-out 0s, color .2s ease-in-out 0s;
+      transition: text-shadow 0.2s ease-in-out 0s, color .2s ease-in-out 0s;
+
+      &.active {
+        color: white;
+        text-shadow: 0 0 16px rgba(255, 255, 255, .6);
+      }
+    }
+
+    & a:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    & .homeIcon {
+      @include icon32;
+      background: url(./images/icons.png) 0 0 no-repeat;
+    }
+
+    & .codeIcon {
+      @include icon32;
+      background: url(./images/icons.png) 0 -32px no-repeat;
+    }
+
+    & .resumeIcon {
+      @include icon32;
+      background: url(./images/icons.png) 0 -64px no-repeat;
+    }
+  }
+
+  & .name {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 452px) {
+    & .name {
+      display: none;
+    }
+  }
+}

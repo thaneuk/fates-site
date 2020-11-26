@@ -1,0 +1,110 @@
+.Resume {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: opacity 0.2s ease-in-out 0s;
+  -moz-transition: opacity 0.2s ease-in-out 0s;
+  -o-transition: opacity 0.2s ease-in-out 0s;
+  transition: opacity 0.2s ease-in-out 0s;
+  z-index: -1;
+  padding-top: 6em;
+
+  background: #220c2c url(./images/resume.png) no-repeat fixed left bottom;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: white;
+    }
+
+    &:focus {
+      color: white;
+    }
+  }
+
+  & h3, & h4 {
+    margin-bottom: 1em
+  }
+
+  & .containerFluid {
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  & .sideNav {
+    position: absolute;
+    top: 78px;
+    bottom: 0;
+    left: 0;
+    width: 240px;
+
+    & h6 {
+      margin-top: .5rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  @media screen and (max-width: 680px) {
+    & .sideNav {
+      width: 120px;
+    }
+  }
+
+  & .sideNav ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+      padding: 16px;
+      margin: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      -webkit-transition: background 0.2s ease-in-out 0s;
+      -moz-transition: background 0.2s ease-in-out 0s;
+      -o-transition: background 0.2s ease-in-out 0s;
+      transition: background 0.2s ease-in-out 0s;
+
+      &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      & a {
+        color: white;
+
+        & p {
+          font-size: 11px;
+          padding: 0;
+          margin: 8px 0 0 0;
+        }
+      }
+    }
+  }
+
+  & .pageContent {
+    position: absolute;
+    margin: 0 0 0 240px;
+    padding: 1em;
+    top: 80px;
+    bottom: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+  }
+
+  @media screen and (max-width: 680px) {
+    & .pageContent {
+      margin: 0 0 0 120px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.Links {
+  a {
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      color: white;
+    }
+
+    &:active {
+      color: white;
+    }
+
+    &:focus {
+      color: white;
+    }
+  }
+}
