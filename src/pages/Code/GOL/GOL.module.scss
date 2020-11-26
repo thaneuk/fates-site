@@ -2,19 +2,4 @@
   & .grid {
     display: block;
   }
-
-  & .grid div {
-    width: 4px;
-    height: 4px;
-    background: none;
-    float: left;
-  }
-
-  & .grid .alive {
-    background-color: white;
-  }
-
-  & .grid .dead {
-    background-color: black;
-  }
 }

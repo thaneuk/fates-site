@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './GOL.module.scss';
 import Grid from './Grid-class';
+import {MemoCell} from './Cell';
 
 
 const GOL: React.FC = () => {
@@ -37,8 +38,7 @@ const GOL: React.FC = () => {
 
   const gridRend = () => {
     return grid.getGridState().map((row: boolean[], ix: number) => {
-      return row.map((cellState: boolean, iy: number) => (
-        <div key={`${ix},${iy}`} className={`${cellState ? `${styles.alive}` : `${styles.dead}`}`}/>));
+      return row.map((cellState: boolean, iy: number) => (<MemoCell key={`${ix},${iy}`} cellState={cellState}/>));
     });
   }
 
